@@ -1,0 +1,15 @@
+<div style="padding: 10px; background-color: lightyellow;">
+  <h2>User loader... ID: {{this.id}}</h2>
+
+  <button {{on "click" this.increment}}>
+    increment ID
+  </button>
+
+  <hr>
+
+  {{#if this.user.isLoading}}
+    Loading...
+  {{else}}
+    Name: {{this.user.data.name}}, ID: {{this.user.data.id}}
+  {{/if}}
+</div>
